@@ -1,0 +1,17 @@
+header{
+    position:relative;
+    height : 10rem;
+    border: 1px solid;
+}
+.profile-pic{
+    width: 100px;
+    height:100px;
+    border-radius: 50%;
+    border:1px solid;
+}
+.profile-pic.position {
+    position: absolute;
+    bottom: 1rem;
+    right: 50%;
+    transform: translate(50%, 0);
+}

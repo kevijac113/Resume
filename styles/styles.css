@@ -1,0 +1,280 @@
+@import './variables.css';
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times','Lato', sans-serif;
+    font-size: 16px; /*base font-size */
+}
+
+body {
+    width: calc(80% + 10em);
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    height: 15rem;
+    border-radius: .2rem;
+    background-color: var(--color-primary);
+    padding: 1rem;
+
+}
+
+.name {
+    font-size: 2.5rem;
+}
+
+.role {
+    padding: 0 0 1rem 0;
+    border-bottom: 2px solid;
+}
+
+.profile-pic {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-pic.position {
+    position: absolute;
+    top: 6rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: var(--color-primary)
+}
+
+.profile-pic img {
+    width: 100%;
+    transform: scale(1.5);
+}
+
+.personal-info {
+    display: flex;
+    align-items: center;
+}
+
+.personal-info .objective {
+    flex: 1;
+    margin: 0 0 .3rem 2rem;
+    font-size: 1rem;
+    padding: 0 1rem;
+}
+
+.personal-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.personal-details div {
+    margin: 1rem 0;
+}
+
+.phone .linkedIn img {
+    width: 1rem;
+    height: 1rem;
+    vertical-align: bottom;
+    margin: 0 .2rem;
+}
+
+.personal-details .material-icons {
+    vertical-align: bottom;
+    font-size: 1rem;
+}
+
+.header-content a {
+    color: black;
+    text-decoration: none;
+}
+
+/* ------- END :: Header Content -------*/
+
+/* ------- START :: Section Content -------*/
+section {
+    margin: 3rem 0;
+}
+
+.section-wrap {
+    display: flex;
+}
+
+.section-wrap .left-container {
+    flex: 0.3;
+    padding: 1rem;
+}
+
+.left-container .skill,
+.right-container .skill {
+    display: inline-block;
+    padding: 0.5rem;
+    background-color: lightblue;
+    margin: 0 0.5rem .5rem 0;
+    border-radius: .5rem;
+}
+
+.section-header {
+    margin: 1rem 0;
+    border-bottom: 2px solid;
+    padding: .5rem 0;
+}
+
+.section-header img {
+    width: 1.5rem;
+    height: 1.5rem;
+    vertical-align: bottom;
+    margin: 0 .5rem 0 0;
+}
+
+.left-container .institute-name {
+    font-weight: bolder;
+}
+
+.left-container .graduate-year {
+    font-size: 0.85rem;
+}
+
+.left-container .institute {
+    margin: 1rem 0;
+}
+
+.section-wrap .right-container {
+    padding: 1rem;
+    flex: 1;
+}
+
+.company .company-name {
+    margin-bottom: 0.75rem;
+}
+
+.company .company-name a{
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.projects .project-title {
+    color: var(--color-primary);
+    text-transform: capitalize;
+}
+
+.project-desc li {
+    line-height: 1.5rem;
+}
+
+.right-container .company-achievements a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+/* ------- END :: Section Content -------*/
+
+/* ------- START :: Common setting -------*/
+
+
+.padding-right-s {
+    padding: 0 0 0.5rem 0;
+}
+
+.padding-s {
+    padding: 0.5rem;
+}
+
+.margin-bottom {
+    margin-bottom: 1rem;
+}
+
+.margin-bottom-s {
+    margin-bottom: .5rem;
+}
+
+/* ------- END :: Common setting -------*/
+
+
+/* ------- START :: Media Queries -------*/
+
+@media screen and (max-width: 768px) {
+    :root {
+        font-size: 14px;
+    }
+    header {
+        height: unset;
+    }
+
+    body {
+        width: calc(70% + 10em);
+    }
+
+    .header-content .personal-info .objective {
+        margin: 1rem 0 0 0;
+        padding: 0;
+    }
+
+    .section-wrap .left-container {
+        flex: 0.75;
+    }
+
+    .profile-pic {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .profile-pic.position {
+        top: 1rem;
+        transform: translate(0);
+        left: 0;
+    }
+
+    .personal-info {
+        flex-direction: column;
+        width: 80%;
+        margin: 0 0 1rem auto;
+    }
+
+    .personal-info .name {
+        font-size: 2rem;
+    }
+
+    .personal-details {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .personal-details div {
+        margin: 0.5rem 0;
+    }
+}
+
+/* ------- END :: Media Queries -------*/
+
+/* ------- START :: Media Queries Mobile -------*/
+
+@media screen and (max-width: 576px) {
+    :root {
+        font-size: 13px;
+    }
+    body {
+        
+        width: 100%;
+    }
+
+    .profile-pic.position {
+        position: static;
+        margin: 0 auto;
+    }
+
+    .header-content .personal-info {
+        text-align: center;
+    }
+
+    .personal-info {
+        width: 100%;
+    }
+
+    .section-wrap {
+        display: block;
+    }
+
+}
+
+/* ------- END :: Media Queries Mobile -------*/
